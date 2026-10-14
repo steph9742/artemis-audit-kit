@@ -4,6 +4,11 @@ Déploiement encadré d'[Artemis](https://github.com/CERT-Polska/Artemis) (CERT 
 
 Le kit ne modifie pas Artemis. Il ajoute une surcharge Docker Compose, des garde-fous vérifiables et des outils d'exploitation en ligne de commande.
 
+> **Fait par la cellule cyber de l'UMLP, pour la cellule cyber de l'UMLP.**
+> Conçu et utilisé par la cellule cyber de l'Université Marie et Louis Pasteur (UMLP) pour
+> auditer sa propre surface exposée, puis publié sous licence MIT pour que d'autres équipes
+> puissent le reprendre, l'adapter et le déployer chez elles.
+
 ## Ce que le kit apporte
 
 - **Modules intrusifs jamais démarrés** : force brute d'identifiants, injections SQL, de commandes et LFI, XSS. Les conteneurs ne sont pas créés ; ils ne sont pas seulement décochés dans l'interface.
@@ -67,6 +72,22 @@ N'auditer que des cibles pour lesquelles une autorisation écrite existe. Pour l
 
 Artemis ne couvre pas l'inventaire Magento et PrestaShop, l'intégrité des scripts JavaScript par rapport à leurs versions de référence, ni les portes dérobées placées sous des noms de fichiers légitimes. Un site sans constat n'est pas un site sain.
 
-## Crédits
+## Licence et provenance
 
-[Artemis](https://github.com/CERT-Polska/Artemis), CERT Polska, licence BSD-3-Clause.
+[MIT](LICENSE) — © 2026 Université Marie et Louis Pasteur.
+
+Artemis, sur lequel repose le kit, est développé par le [CERT Polska](https://github.com/CERT-Polska/Artemis) sous licence BSD-3-Clause. Il n'est pas redistribué ici : `installer.sh` le récupère depuis son dépôt officiel.
+
+Un des outils de la **cellule cyber de l'UMLP**, écrits pour ses propres besoins et
+publiés ensemble :
+
+| Outil | Rôle |
+|---|---|
+| **Slowpoke** | gestion des incidents de cybersécurité |
+| **Catalogue** | cartographie du SI et conformité cyber ; consomme les constats de ce moteur |
+| **artemis-audit-kit** (ce dépôt) | audit de la surface exposée, sur le socle Artemis |
+| **Assistants IA** | réponses sourcées sur le corpus de procédures, analyse de journaux |
+| **Astreintes** | planning et heures d'astreinte de l'équipe |
+| **Gestion de crise cyber** | conduite d'une crise d'origine cyber : main courante, décisions, communications, exercices |
+| **Arche** | réplique hors ligne et plan de reprise YunoHost + Docker |
+| **Bureautix Fleet** | parc de postes de travail NixOS durcis, multi-entités — *expérimental, en cours* |
